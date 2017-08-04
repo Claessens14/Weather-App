@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="weatherForcast2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Earth Horizon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bsH-D1-csd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weather Forcast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T05-B7-7aX">
+                                <rect key="frame" x="163" y="28" width="275" height="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="0.85805495689655187" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="City's name..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phB-32-nFs">
+                                <rect key="frame" x="209" y="86" width="182" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.76883081896551719" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.75" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. Toronto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E3N-j7-mY5">
+                                <rect key="frame" x="20" y="136" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eC-fh-WBy">
+                                <rect key="frame" x="260" y="183" width="81" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cbo-kQ-xsp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9L-qn-Wjk">
+                                <rect key="frame" x="163" y="226" width="275" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="189" id="rrn-a6-vhF"/>
+                                    <constraint firstAttribute="width" constant="275" id="zgF-lO-WPw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6eC-fh-WBy" firstAttribute="top" secondItem="E3N-j7-mY5" secondAttribute="bottom" constant="17" id="12B-fT-fij"/>
+                            <constraint firstItem="R9L-qn-Wjk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BGj-TJ-0ye"/>
+                            <constraint firstItem="T05-B7-7aX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bdd-LT-jMT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bsH-D1-csd" secondAttribute="bottom" id="EQZ-7r-7Vs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bsH-D1-csd" secondAttribute="trailing" constant="-20" id="HPC-3e-Rt0"/>
+                            <constraint firstItem="E3N-j7-mY5" firstAttribute="top" secondItem="phB-32-nFs" secondAttribute="bottom" constant="29" id="IOH-xl-KTi"/>
+                            <constraint firstItem="bsH-D1-csd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="S8j-f2-h7q"/>
+                            <constraint firstItem="R9L-qn-Wjk" firstAttribute="top" secondItem="6eC-fh-WBy" secondAttribute="bottom" constant="13" id="WFE-Jc-Xnf"/>
+                            <constraint firstItem="6eC-fh-WBy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YMl-rv-PJN"/>
+                            <constraint firstItem="phB-32-nFs" firstAttribute="top" secondItem="T05-B7-7aX" secondAttribute="bottom" constant="23" id="dP7-Ld-VCd"/>
+                            <constraint firstItem="T05-B7-7aX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="j5h-xG-Sar"/>
+                            <constraint firstItem="bsH-D1-csd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="lET-Ht-ZaU"/>
+                            <constraint firstItem="E3N-j7-mY5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lyP-ei-QxH"/>
+                            <constraint firstItem="E3N-j7-mY5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wBv-Gp-bOY"/>
+                            <constraint firstItem="phB-32-nFs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yzB-zq-TUF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="R9L-qn-Wjk" id="VtM-NC-oaK"/>
+                        <outlet property="cityTextField" destination="E3N-j7-mY5" id="b5B-4B-nq0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="492" y="354"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Earth Horizon.jpg" width="5120" height="2880"/>
+    </resources>
+</document>
